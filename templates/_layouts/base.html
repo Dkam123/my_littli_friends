@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>MyFriends - {{ context.page_title }}</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+
+</head>
+<body>
+    <header>
+        <h1>Oficcial sait MyFriends</h1>
+        <hr>
+    </header>
+    <nav>
+        |
+        <a href="{{ url_for('index') }}">Main</a>
+        |
+        <a href="{{ url_for('about') }}">About</a>
+        |
+        <a href="{{ url_for('news') }}">News</a>
+        |
+        <a href="{{ url_for('deps') }}">Departaments</a>
+        |
+        <a href="{{ url_for('contacts') }}">Contacts</a>
+        |
+        <hr>
+
+    </nav>
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+    <footer>
+        <hr>
+        <h4>
+            Copyright: &copy; Люблю Своїх Собак&trade; - Южноукраїнськ, 2023
+        </h4>
+    </footer>
+
+
+
+</body>
+</html>
